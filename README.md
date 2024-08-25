@@ -24,6 +24,8 @@ Please note:
     git clone https://github.com/liuyuweitarek/downgrade-upgrade-colab-python.git custom_env_colab
     ```
 
-2. Place the project in your Google Drive.
+2. Install `cudnn-10.1-linux-x64-v7.6.5.32.tgz` from [NVIDIA website](https://developer.download.nvidia.com/compute/redist/cudnn/v7.6.5/cudnn-10.1-linux-x64-v7.6.5.32.tgz). Here is the [backup](https://drive.google.com/file/d/1R54KoKk16CcpFu3tR80dEyC_aB8UOyXc/view?usp=sharing). Place in the same folder as `custom_env_colab`.
 
-3. Follow the instructions in the `Creating Specific Version of Python and PyTorch Environment on Colab.ipynb` notebook.
+3. Place the project in your Google Drive.
+
+4. Follow the instructions in the `Creating Specific Version of Python and PyTorch Environment on Colab.ipynb` notebook.
