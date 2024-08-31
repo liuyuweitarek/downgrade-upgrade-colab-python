@@ -1,10 +1,13 @@
 # Creating a Specific Version of Python and PyTorch Environment on Colab
 
-This document will guide free users in creating a specific version of Python, PyTorch and Tensorflow execution environment on Google Colab. Based on the steps provided here, you can create any Python environment (version >= 3.7) in Google Colab. If you're using TensorFlow with GPU support requires specific actions and version compatibility. Please refer to [this table](https://www.tensorflow.org/install/source#gpu) for the corresponding versions.
+This document will guide free users in creating a specific version of Python, PyTorch and Tensorflow execution environment on Google Colab. 
+
+Based on the steps provided here, you can create any Python(version >= 3.7) environment in Google Colab. If you're using TensorFlow with GPU support requires specific actions and version compatibility. 
+Please refer to [this table](https://www.tensorflow.org/install/source#gpu) for the corresponding versions.
 
 **Noted that this method has limitations.** 
 
-Google Colab cells cannot directly execute Python code from the environment you create. You need to activate the created environment at the start of each cell execution, which is equivalent to running your command in the terminal.
+With this method, cell cannot directly execute Python code from the environment you create. You need to activate the created environment at the start of each cell execution, which is equivalent to running your command in the terminal.
 
 i.e. Cell will be like below to execute your code:
 
@@ -15,11 +18,11 @@ conda activate myenv
 python main.py
 ```
 
-As proof as concept, I Use Miniconda version 3.8 to create a Python 3.7 environment, which can use both PyTorch 1.7.1 and tensorflow 2.1.0 version here.
+As proof of concept, I use Miniconda version 3.8 to create a Python 3.7 environment, which can use both PyTorch 1.7.1 and tensorflow 2.1.0 version here.
 
 If have a better approach, feel free to share it with me or submit a PR. Thank you!
 
-Further,
+Furthermore,
 
 1. How to deal with Colab time limit?
   
