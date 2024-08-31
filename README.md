@@ -188,27 +188,43 @@ protobuf==3.20.1
 
 Based on the `CUDA Version` you determined above, find the cudnn package to install:
 
+For example, I chose CUDA 10.1 above, so after checkouting the table below, I download `cudnn-10.1-linux-x64-v7.6.5.32.tgz`.
+
+I chose `v7.6.5.32` because many references use this version without any issues. However, in principle, you just need to select one that matches the version compatibility listed below.
+
 Below are the download links for CUDA versions <= 11. 
+
+> _If you are using CUDA version >= 12, you might consider downloading it directly from the official website._
 
 |Cudnn Version|Sources|
 | --- | --- |
 |v5 - v8.8.0| https://developer.download.nvidia.com/compute/redist/cudnn |
 |v8.4.0 - v9.3.0| https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64 |
 
-If you are using CUDA version >= 12, you might consider downloading it directly from the official website.
-
-For example:
-
-- CUDA 10.1
-
-I choose `cudnn-10.1-linux-x64-v7.6.5.32.tgz` to download.
-
 <table><thead><tr><th>cuDNN</th><th>CUDA</th></tr></thead><tbody><tr><td>cuDNN v8.4.0 (April 1st, 2022)</td><td>CUDA 11.x</td></tr><tr><td>cuDNN v8.4.0 (April 1st, 2022)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.3.3 (March 18th, 2022)</td><td>CUDA 11.5</td></tr><tr><td>cuDNN v8.3.3 (March 18th, 2022)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.3.2 (January 10th, 2022)</td><td>CUDA 11.5</td></tr><tr><td>cuDNN v8.3.2 (January 10th, 2022)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.3.1 (November 22nd, 2021)</td><td>CUDA 11.5</td></tr><tr><td>cuDNN v8.3.1 (November 22nd, 2021)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.3.0 (November 3rd, 2021)</td><td>CUDA 11.5</td></tr><tr><td>cuDNN v8.3.0 (November 3rd, 2021)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.2.4 (September 2nd, 2021)</td><td>CUDA 11.4</td></tr><tr><td>cuDNN v8.2.4 (September 2nd, 2021)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.2.2 (July 6th, 2021)</td><td>CUDA 11.4</td></tr><tr><td>cuDNN v8.2.2 (July 6th, 2021)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.2.1 (June 7th, 2021)</td><td>CUDA 11.x</td></tr><tr><td>cuDNN v8.2.1 (June 7th, 2021)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.2.0 (April 23rd, 2021)</td><td>CUDA 11.x</td></tr><tr><td>cuDNN v8.2.0 (April 23rd, 2021)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.1.1 (Feburary 26th, 2021)</td><td>CUDA 11.0,11.1 and 11.2</td></tr><tr><td>cuDNN v8.1.1 (Feburary 26th, 2021)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.1.0 (January 26th, 2021)</td><td>CUDA 11.0,11.1 and 11.2</td></tr><tr><td>cuDNN v8.1.0 (January 26th, 2021)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.0.5 (November 9th, 2020)</td><td>CUDA 11.1</td></tr><tr><td>cuDNN v8.0.5 (November 9th, 2020)</td><td>CUDA 11.0</td></tr><tr><td>cuDNN v8.0.5 (November 9th, 2020)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.0.5 (November 9th, 2020)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v8.0.4 (September 28th, 2020)</td><td>CUDA 11.1</td></tr><tr><td>cuDNN v8.0.4 (September 28th, 2020)</td><td>CUDA 11.0</td></tr><tr><td>cuDNN v8.0.4 (September 28th, 2020)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.0.4 (September 28th, 2020)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v8.0.3 (August 26th, 2020)</td><td>CUDA 11.0</td></tr><tr><td>cuDNN v8.0.3 (August 26th, 2020)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.0.3 (August 26th, 2020)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v8.0.2 (July 24th, 2020)</td><td>CUDA 11.0</td></tr><tr><td>cuDNN v8.0.2 (July 24th, 2020)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v8.0.2 (July 24th, 2020)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v8.0.1 RC2 (June 26th, 2020)</td><td>CUDA 11.0</td></tr><tr><td>cuDNN v8.0.1 RC2 (June 26th, 2020)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v7.6.5 (November 18th, 2019)</td><td>CUDA 10.2</td></tr><tr><td>cuDNN v7.6.5 (November 5th, 2019)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v7.6.5 (November 5th, 2019)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.6.5 (November 5th, 2019)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.6.5 (November 5th, 2019)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.6.4 (September 27, 2019)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v7.6.4 (September 27, 2019)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.6.4 (September 27, 2019)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.6.4 (September 27, 2019)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.6.3 (August 23, 2019)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v7.6.3 (August 23, 2019)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.6.3 (August 23, 2019)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.6.3 (August 23, 2019)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.6.2 (July 22, 2019)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v7.6.2 (July 22, 2019)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.6.2 (July 22, 2019)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.6.2 (July 22, 2019)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.6.1 (June 24, 2019)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v7.6.1 (June 24, 2019)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.6.1 (June 24, 2019)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.6.1 (June 24, 2019)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.6.0 (May 20, 2019)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v7.6.0 (May 20, 2019)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.6.0 (May 20, 2019)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.6.0 (May 20, 2019)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.5.1 (April 22, 2019)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v7.5.1 (April 22, 2019)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.5.1 (April 22, 2019)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.5.1 (April 22, 2019)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.5.0 (Feb 25, 2019)</td><td>CUDA 10.1</td></tr><tr><td>cuDNN v7.5.0 (Feb 21, 2019)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.5.0 (Feb 21, 2019)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.5.0 (Feb 21, 2019)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.4.2 (Dec 14, 2018)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.4.2 (Dec 14, 2018)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.4.2 (Dec 14, 2018)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.4.1 (Nov 8, 2018)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.4.1 (Nov 8, 2018)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.4.1 (Nov 8, 2018)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.3.1 (Sept 28, 2018)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.3.1 (Sept 28, 2018)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.3.1 (Sept 28, 2018)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.3.0 (Sept 19, 2018)</td><td>CUDA 10.0</td></tr><tr><td>cuDNN v7.3.0 (Sept 19, 2018)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.2.1 (August 7, 2018)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.1.4 (May 16, 2018)</td><td>CUDA 9.2</td></tr><tr><td>cuDNN v7.1.4 (May 16, 2018)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.1.4 (May 16, 2018)</td><td>CUDA 8.0</td></tr><tr><td>cuDNN v7.1.3 (April 17, 2018)</td><td>CUDA 9.1</td></tr><tr><td>cuDNN v7.1.3 (April 17, 2018)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.1.3 (April 17, 2018)</td><td>CUDA 8.0</td></tr><tr><td>cuDNN v7.1.2 (Mar 21, 2018)</td><td>CUDA 9.1 &amp; 9.2</td></tr><tr><td>cuDNN v7.1.2 (Mar 21, 2018)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.0.5 (Dec 11, 2017)</td><td>CUDA 9.1</td></tr><tr><td>cuDNN v7.0.5 (Dec 5, 2017)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v7.0.5 (Dec 5, 2017)</td><td>CUDA 8.0</td></tr><tr><td>cuDNN v7.0.4 (Nov 13, 2017)</td><td>CUDA 9.0</td></tr><tr><td>cuDNN v6.0 (April 27, 2017)</td><td>CUDA 8.0</td></tr><tr><td>cuDNN v6.0 (April 27, 2017)</td><td>CUDA 7.5</td></tr><tr><td>cuDNN v5.1 (Jan 20, 2017)</td><td>CUDA 8.0</td></tr><tr><td>cuDNN v5.1 (Jan 20, 2017)</td><td>CUDA 7.5</td></tr><tr><td>cuDNN v5 (May 27, 2016)</td><td>CUDA 8.0</td></tr><tr><td>cuDNN v5 (May 12, 2016)</td><td>CUDA 7.5</td></tr><tr><td>cuDNN v4 (Feb 10, 2016)</td><td>CUDA 7.0 and later.</td></tr><tr><td>cuDNN v3 (September 8, 2015)</td><td>CUDA 7.0 and later.</td></tr><tr><td>cuDNN v2 (March 17,2015)</td><td>CUDA 6.5 and later.</td></tr><tr><td>cuDNN v1 (cuDNN 6.5 R1)</td><td></td></tr></tbody></table>
 
-Furthermore,
+## Get started
 
+As proof as concept, I Use Miniconda create a Python 3.7 environment, which can use both PyTorch 1.7.1 and tensorflow 2.1.0 version here.
+
+1. Clone the project
+
+    ```bash
+    git clone https://github.com/liuyuweitarek/downgrade-upgrade-colab-python.git custom_env_colab
+    ```
+If have a better approach, feel free to share it with me or submit a PR. Thank you!
+
+2. Install `cudnn-10.1-linux-x64-v7.6.5.32.tgz` from [NVIDIA website](https://developer.download.nvidia.com/compute/redist/cudnn/v7.6.5/cudnn-10.1-linux-x64-v7.6.5.32.tgz). Here is the [backup](https://drive.google.com/file/d/1R54KoKk16CcpFu3tR80dEyC_aB8UOyXc/view?usp=sharing). Place in the same folder as `custom_env_colab`.
+Further,
+
+3. Place the project in your Google Drive.
+
+4. Follow the instructions in the `Creating Specific Version of Python and PyTorch Environment on Colab.ipynb` notebook.
+
+## Q&A and Notes
 1. How to deal with Colab time limit?
-  
+
     This document does not overcome the time limit issue for free users, who will need to wait for a specific period before using it again. Therefore, please **make good use of Checkpoint to save and continue training progress**.
- 
+
 2. Please use the version of Miniconda installer which is higher than the Python version you wish to use to create the virtual environment.
+Furthermore,
