@@ -2,8 +2,7 @@
 
 This document will guide free users in creating a specific version of Python, PyTorch and Tensorflow execution environment on Google Colab. 
 
-Based on the steps provided here, you can create any Python(version >= 3.7) environment in Google Colab. If you're using TensorFlow with GPU support requires specific actions and version compatibility. 
-Please refer to [this table](https://www.tensorflow.org/install/source#gpu) for the corresponding versions.
+Based on the steps provided here, you can create any Python(version >= 3.7) environment in Google Colab. 
 
 **Noted that this method has limitations.** 
 
